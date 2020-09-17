@@ -10,7 +10,7 @@ conectarBaseDeDatos();
 //habilitamos cors
 app.use(cors());
 //para leer datos que ingrese el usuario
-app.use(cors({origin:'https://administrador-proyectos-mern.netlify.app',credentials: true}));
+app.use(cors({origin:'*',credentials: true}));
 app.use(express.json({ extended: true}));
 
 
