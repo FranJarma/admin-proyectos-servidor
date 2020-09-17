@@ -4,11 +4,11 @@ const cors = require('cors');
 //creamos el servidor
 const app = express();
 
+//para leer datos que ingrese el usuario
+app.use(cors({origin:'*'}));
 //conectamos a la bd
 conectarBaseDeDatos();
 
-//para leer datos que ingrese el usuario
-app.use(cors({origin:'*'}));
 app.use(express.json({ extended: true}));
 
 
