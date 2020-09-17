@@ -13,7 +13,7 @@ app.use(express.json({ extended: true}));
 
 
 //puerto de APP
-const port = process.env.port || 4000;
+const port = process.env.PORT || 4000;
 
 // Importamos rutas
 app.use('/api/usuarios', require('./routes/usuarios.js'));
