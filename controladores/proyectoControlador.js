@@ -1,7 +1,6 @@
 const Proyecto = require('../modelos/Proyecto.js');
 const Tarea = require('../modelos/Tarea.js');
 
-const { restart } = require('nodemon');
 const { validationResult } = require('express-validator');
 exports.crearProyecto = async(req,res) => {
     //revisamos si hay errores, en caso de que haya lo colocamos en un array que mostrará dichos errores
