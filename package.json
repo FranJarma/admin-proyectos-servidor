@@ -4,7 +4,8 @@
   "description": "API del lado de servidor para Administrador de Proyectos",
   "main": "index.js",
   "scripts": {
-    "start": "node .",
+    "start": "node index.js",
+    "build": "webpack",
     "dev": "nodemon ."
   },
   "repository": {
