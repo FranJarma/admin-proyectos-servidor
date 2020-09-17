@@ -1,0 +1,32 @@
+{
+  "name": "administrador-proyectos-servidor",
+  "version": "1.0.0",
+  "description": "API del lado de servidor para Administrador de Proyectos",
+  "main": "index.js",
+  "scripts": {
+    "start": "node .",
+    "dev": "nodemon ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Panja512/Administrador-de-Proyectos.git"
+  },
+  "author": "Francisco Jarma",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Panja512/Administrador-de-Proyectos/issues"
+  },
+  "homepage": "https://github.com/Panja512/Administrador-de-Proyectos#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-validator": "^6.6.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.9.27"
+  }
+}
