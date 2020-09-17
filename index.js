@@ -13,7 +13,7 @@ app.use(cors());
 
 app.use(express.json({ extended: true}));
 // Website you wish to allow to connect
-res.setHeader('Access-Control-Allow-Origin', 'https://admin-proyectos-mern.herokuapp.com');
+res.setHeader('Access-Control-Allow-Origin', 'https://administrador-proyectos-mern.netlify.app/');
 
 // Request methods you wish to allow
 res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
