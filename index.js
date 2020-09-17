@@ -8,7 +8,7 @@ const app = express();
 conectarBaseDeDatos();
 
 //para leer datos que ingrese el usuario
-app.use(cors({origin:'*',credentials: true}));
+app.use(cors({origin:'*'}));
 app.use(express.json({ extended: true}));
 
 
