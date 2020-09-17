@@ -7,8 +7,6 @@ const app = express();
 //conectamos a la bd
 conectarBaseDeDatos();
 
-//habilitamos cors
-app.use(cors());
 //para leer datos que ingrese el usuario
 app.use(cors({origin:'*',credentials: true}));
 app.use(express.json({ extended: true}));
