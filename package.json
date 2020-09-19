@@ -3,9 +3,11 @@
   "version": "1.0.0",
   "description": "API del lado de servidor para Administrador de Proyectos",
   "main": "index.js",
+  "engines": {
+    "node": "14.x"
+  },
   "scripts": {
-    "start": "node index.js",
-    "build": "webpack",
+    "start": "node .",
     "dev": "nodemon ."
   },
   "repository": {
