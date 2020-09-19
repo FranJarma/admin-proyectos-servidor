@@ -1,6 +1,5 @@
 const express = require('express');
 const conectarBaseDeDatos = require ('./config/db.js');
-const cors = require("cors-anywhere");
 //creamos el servidor
 const app = express();
 //conectamos a la bd
@@ -11,10 +10,12 @@ app.use(express.json({ extended: true}));
 //puerto de APP
 const port = process.env.PORT || 4000;
 
-cors.createServer({
-    originWhitelist: [],
-    requireHeader: ['origin', 'x-requested-with'],
-    removeHeaders: ['cookie', 'cookie2'] // permite que puedan acceder todos los orígenes de las peticiones
+app.use(function(res, next) {
+    res.header("Access-Control-Allow-Origin", '*');
+    res.header("Access-Control-Allow-Credentials", true);
+    res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE,OPTIONS');
+    res.header("Access-Control-Allow-Headers", 'Origin,X-Requested-With,Content-Type,Accept,content-type,application/json');
+    next();
 });
 
 // Importamos rutas
