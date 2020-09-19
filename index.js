@@ -1,11 +1,13 @@
 const express = require('express');
 const conectarBaseDeDatos = require ('./config/db.js');
+const cors = require("cors");
 //creamos el servidor
 const app = express();
 //conectamos a la bd
 conectarBaseDeDatos();
 //para leer datos que ingrese el usuario
 app.use(express.json({ extended: true}));
+app.use(cors());
 //puerto de APP
 const PORT = process.env.PORT || 4000;
 
