@@ -1,5 +1,6 @@
 const express = require('express');
 const conectarBaseDeDatos = require ('./config/db.js');
+const cors = require("cors");
 //creamos el servidor
 const app = express();
 //conectamos a la bd
@@ -9,6 +10,8 @@ app.use(express.json({ extended: true}));
 
 //puerto de APP
 const port = process.env.PORT || 4000;
+
+app.use(cors());
 
 app.use((req, res, next) => {
     res.header("Access-Control-Allow-Origin", "*");
