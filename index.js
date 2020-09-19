@@ -10,13 +10,10 @@ app.use(express.json({ extended: true}));
 //puerto de APP
 const port = process.env.PORT || 4000;
 
-app.use(function(res, next) {
-    res.header("Access-Control-Allow-Origin", '*');
-    res.header("Access-Control-Allow-Credentials", true);
-    res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE,OPTIONS');
-    res.header("Access-Control-Allow-Headers", 'Origin,X-Requested-With,Content-Type,Accept,content-type,application/json');
+app.use((req, res, next) => {
+    res.header("Access-Control-Allow-Origin", process.env.ORIGIN || "*");
     next();
-});
+  });
 
 // Importamos rutas
 app.use('/api/usuarios', require('./routes/usuarios.js'));
