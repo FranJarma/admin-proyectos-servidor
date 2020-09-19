@@ -2,7 +2,7 @@
   "name": "administrador-proyectos-servidor",
   "version": "1.0.0",
   "description": "API del lado de servidor para Administrador de Proyectos",
-  "main": "index.js",
+  "main": " node index.js",
   "engines": {
     "node": "14.x"
   },
